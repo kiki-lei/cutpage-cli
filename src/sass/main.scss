@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+@import "./var";
+@import "./reset";
+@import "./mixin";
+@import "./global";
+@import "./effect";
+
+/*
+ * 登录
+ */
+.login-title {
+  color: #1073de;
+  padding-top: 52px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 9px;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    height: 36px;
+    line-height: 36px;
+    -webkit-appearance: none;
+  }
+}
+
+.login-form {
+  .sms {
+    right: 9px;
+    top: 0;
+    color: #1073de;
+    line-height: 36px;
+    &:hover {
+      cursor: pointer;
+      color: lighten(#1073de, 3%);
+    }
+  }
+
+  input[type="button"] {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #1073de;
+    border-radius: 5px;
+    border: none;
+    height: 36px;
+    color: #ffffff;
+    -webkit-appearance: none;
+  }
+}
+.logout {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #1073de;
+  border-radius: 5px;
+  border: none;
+  height: 36px;
+  color: #ffffff;
+  -webkit-appearance: none;
+}
+
+/* 详情页 */
+.detailListBox {
+  padding: 8px 15px;
+}
+.detailList {
+  margin-bottom: 13px;
+
+  .detailName {
+    margin-bottom: 6px;
+    color: #cccccc;
+  }
+  .detailAnswer {
+    color: $gray3;
+  }
+}
+
+/* 信用审查 */
+.creditPromiseTop {
+  padding: 18px 15px;
+  border-bottom: 10px solid #f2f2f2;
+
+  p {
+    margin-top: 10px;
+    color: #dddddd;
+  }
+}
+.creditPromiseBottom {
+  li {
+    height: 39px;
+    line-height: 39px;
+    padding: 0 15px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+  }
+  .num {
+    color: $gray9;
+  }
+}
+
+/* 搜索历史 */
+.historyForm input {
+  border: none;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px;
+}
+
+/* 信易+ */
+.xyjBox {
+  width: 240px;
+  margin: 0 auto;
+  background-color: #dddddd;
+  padding: 10px 39px;
+  border-radius: 5px;
+}
+
+.myCreditPointBox {
+  #valueTime,
+  #numb1,
+  #numb2 {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+  #valueTime {
+    bottom: 6%;
+    font-size: 12px;
+  }
+
+  #numb1 {
+    bottom: 40%;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1073de;
+  }
+
+  #numb2 {
+    bottom: 28%;
+    font-size: 15px;
+    color: #333333;
+  }
+}

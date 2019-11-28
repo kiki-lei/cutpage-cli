@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* 字体 */
+@for $i from 10 through 30 {
+  @if ($i%2==0) {
+    .f#{$i} {
+      font-size: 1px * $i;
+    }
+  }
+}
+
+/* 间距 */
+// margin
+@for $t from 5 through 30 {
+  @if ($t%5==0) {
+    .mgT#{$t} {
+      margin-top: 1px * $t;
+    }
+  }
+}
+
+@for $r from 5 through 30 {
+  @if ($r%5==0) {
+    .mgR#{$r} {
+      margin-right: 1px * $r;
+    }
+  }
+}
+
+@for $b from 5 through 30 {
+  @if ($b%5==0) {
+    .mgB#{$b} {
+      margin-bottom: 1px * $b;
+    }
+  }
+}
+
+@for $l from 5 through 30 {
+  @if ($l%5==0) {
+    .mgL#{$l} {
+      margin-left: 1px * $l;
+    }
+  }
+}
+
+// padding
+@for $t from 5 through 30 {
+  @if ($t%5==0) {
+    .pdT#{$t} {
+      padding-top: 1px * $t;
+    }
+  }
+}
+
+@for $r from 5 through 30 {
+  @if ($r%5==0) {
+    .pdR#{$r} {
+      padding-right: 1px * $r;
+    }
+  }
+}
+
+@for $b from 5 through 30 {
+  @if ($b%5==0) {
+    .pdB#{$b} {
+      padding-bottom: 1px * $b;
+    }
+  }
+}
+
+@for $l from 5 through 30 {
+  @if ($l%5==0) {
+    .pdL#{$l} {
+      padding-left: 1px * $l;
+    }
+  }
+}
+
+/* 多行超出省略号 */
+@mixin ellipsisM($lineNum: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineNum;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsisMul {
+  @include ellipsisM;
+}

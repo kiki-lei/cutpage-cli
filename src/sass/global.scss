@@ -1,0 +1,354 @@
+@charset "utf-8";
+
+@import "./var";
+
+/* public */
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bgWhite {
+  background-color: #ffffff;
+}
+
+.bgWhite2 {
+  background-color: #f5f6fa;
+}
+
+.cWhite {
+  color: #ffffff;
+}
+
+.cRed {
+  color: $red;
+}
+
+.cBlue {
+  color: $blue;
+}
+
+.cGray6 {
+  color: $gray6;
+}
+
+.cGray9 {
+  color: $gray9;
+}
+
+.bd {
+  border: 1px solid #f5f5f5;
+}
+
+.bdb {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.bdbn {
+  border-bottom: none !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.posr {
+  position: relative;
+}
+
+.posa {
+  position: absolute;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.dn {
+  display: none;
+}
+
+.db {
+  display: block;
+}
+
+.df {
+  display: flex;
+}
+
+.commonPadding {
+  padding: 0 15px;
+}
+
+.c999 {
+  color: #999999;
+}
+
+.c666 {
+  color: #666666;
+}
+
+.c222 {
+  color: #222222;
+}
+
+.middleContainer {
+  padding-top: 50px;
+}
+
+.middlePadding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.insidePadding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* pubTitle */
+.pubTitle {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 16px;
+
+  span {
+    padding-bottom: 14px;
+    background: url("#{$base-url}/line.png") no-repeat bottom center;
+    background-size: 30px;
+  }
+
+  a {
+    line-height: 60px;
+  }
+
+  &.bk {
+    font-size: 14px;
+    color: #999999;
+  }
+}
+
+/* img */
+.img-box {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+  }
+}
+
+/* 列表 */
+.list {
+  background-color: #ffffff;
+
+  li {
+    overflow: hidden;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eeeeee;
+
+    a {
+      display: block;
+    }
+
+    h3 {
+      padding-right: 35px;
+      margin-bottom: 10px;
+      color: $gray3;
+      background: url("#{$base-url}/arrR.png") no-repeat right center;
+    }
+
+    p {
+      color: #dddddd;
+    }
+
+    span {
+      padding-left: 10px;
+    }
+  }
+
+  &.list-history li {
+    border-bottom: none;
+
+    h3 {
+      padding-right: 0;
+      background: none;
+      color: $gray9;
+    }
+
+    span.fl {
+      padding: 0;
+    }
+  }
+
+  &.list-promise li {
+    h3 {
+      background: url("#{$base-url}/arrR.png") no-repeat right 5px;
+    }
+
+    span.fl {
+      padding: 0;
+    }
+  }
+}
+
+/* 详情页头部：标题、返回、分享 */
+#insideTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 999;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+  background-color: $blue;
+  width: 300px;
+  margin: 0 auto;
+  background: url("#{$base-url}/title bg.png") no-repeat center;
+
+  .insideTopBack {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: url("#{$base-url}/arrL.png") no-repeat 18px center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .insideTopName {
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .insideTopSys,
+  .addAuthorize,
+  .insideTopShare {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 88px;
+    height: 88px;
+    float: right;
+  }
+
+  .insideTopShare {
+    background: url("#{$base-url}/share.png") no-repeat center;
+    background-size: 18px;
+  }
+
+  .insideTopSys {
+    background: url("#{$base-url}/sys.png") no-repeat center;
+  }
+
+  .addAuthorize {
+    background: url("#{$base-url}/add.png") no-repeat center;
+    background-size: 34px;
+  }
+}
+
+/* 小标签 */
+.tagsBox {
+  display: flex;
+
+  i {
+    min-width: 50px;
+    height: 16px;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-style: normal;
+  }
+
+  .tags {
+    color: #ffffff;
+
+    &.tagBlue {
+      background-color: #55a0f1;
+    }
+  }
+}
+
+/* 暂无数据 */
+.noData {
+  height: 200px;
+  background: url("#{$base-url}/noData.png") no-repeat center 25%;
+  background-size: 85px;
+
+  &::after {
+    content: "暂无记录";
+    color: #999999;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    top: 43.78%;
+  }
+}
+
+.noPermission {
+  height: 200px;
+  background: url("#{$base-url}/noData.png") no-repeat center 25%;
+  background-size: 85px;
+
+  &::after {
+    content: "暂无权限";
+    color: #999999;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    top: 43.78%;
+  }
+}
