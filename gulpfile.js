@@ -11,6 +11,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
 
 const postcss = require('gulp-postcss');
 const pxtoviewport = require('postcss-px-to-viewport');
